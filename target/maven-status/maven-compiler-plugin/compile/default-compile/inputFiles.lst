@@ -1,2 +1,6 @@
 /Users/kevintran/workspace/github/springtest/src/main/java/com/kevintran1079/springtest/SpringtestApplication.java
 /Users/kevintran/workspace/github/springtest/src/main/java/com/kevintran1079/springtest/controller/GreetingController.java
+/Users/kevintran/workspace/github/springtest/src/main/java/com/kevintran1079/springtest/controller/UserController.java
+/Users/kevintran/workspace/github/springtest/src/main/java/com/kevintran1079/springtest/dto/UserReponse.java
+/Users/kevintran/workspace/github/springtest/src/main/java/com/kevintran1079/springtest/model/User.java
+/Users/kevintran/workspace/github/springtest/src/main/java/com/kevintran1079/springtest/service/UserService.java

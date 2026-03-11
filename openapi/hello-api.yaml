@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Hello API
   version: 1.0.0
-  description: Minimal contract-first example for a Spring Boot endpoint.
+  description: Minimal contract-first example for Spring Boot endpoints.
 paths:
   /api/hello:
     get:
@@ -16,3 +16,71 @@ paths:
               schema:
                 type: string
                 example: Hello World
+  /api/users:
+    get:
+      operationId: getUsers
+      summary: Return all users
+      responses:
+        '200':
+          description: A list of all users without passwords
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserResponse'
+              examples:
+                default:
+                  summary: Example users response
+                  value:
+                    - id: 1
+                      username: alice
+                      email: alice@example.com
+                    - id: 2
+                      username: bob
+                      email: bob@example.com
+components:
+  schemas:
+    User:
+      type: object
+      description: Internal user model including password.
+      required:
+        - id
+        - username
+        - password
+        - email
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        username:
+          type: string
+          example: alice
+        password:
+          type: string
+          format: password
+          example: secret123
+        email:
+          type: string
+          format: email
+          example: alice@example.com
+    UserResponse:
+      type: object
+      description: Public user representation returned by the API.
+      required:
+        - id
+        - username
+        - email
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        username:
+          type: string
+          example: alice
+        email:
+          type: string
+          format: email
+          example: alice@example.com

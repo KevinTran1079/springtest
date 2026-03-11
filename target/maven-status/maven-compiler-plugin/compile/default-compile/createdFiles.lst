@@ -1,1 +1,6 @@
+com/kevintran1079/springtest/service/UserService.class
+com/kevintran1079/springtest/SpringtestApplication.class
+com/kevintran1079/springtest/dto/UserReponse.class
+com/kevintran1079/springtest/model/User.class
 com/kevintran1079/springtest/controller/GreetingController.class
+com/kevintran1079/springtest/controller/UserController.class
